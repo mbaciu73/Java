@@ -9,7 +9,7 @@ public class hourlyEmployee extends Employee{
 	private double hourlyRate;
 
 	public hourlyEmployee(String firstName, String surName, int staffNumber, double annualSalary,double hoursWorked,double hourlyRate) {
-		super(firstName, surName, staffNumber, annualSalary);
+		super(firstName, surName, staffNumber, 0);
 		this.hoursWorked = hoursWorked;
 		this.hourlyRate=hourlyRate;
 	}
@@ -37,7 +37,7 @@ public class hourlyEmployee extends Employee{
 	
 	public String toString() {
 		//returns from employee and the hours worked and rate
-		return super.toString() +"The hours worked is "+this.hoursWorked+" and the rate is "+this.hourlyRate;
+		return super.toString() +" the hours worked is "+this.hoursWorked+" and the rate is "+this.hourlyRate;
 				
 	}
 
