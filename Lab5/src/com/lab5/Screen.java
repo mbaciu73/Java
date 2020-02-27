@@ -64,15 +64,14 @@ public class Screen extends JFrame implements ActionListener,MouseListener{
 		centre.add(j1);
 		centre.add(mousePanel);
 		
-		
+		//this is for info for the user in case the name is not entered 
 		j1.setToolTipText("Enter your name");
 		
-		
+		//adding to the display in whatever format
 		add(centre, BorderLayout.CENTER);
 		add(south, BorderLayout.SOUTH);
 		add(south, BorderLayout.SOUTH);
 		add(north,BorderLayout.NORTH);
-		add(centre,BorderLayout.CENTER);
 		
 		setVisible(true);
 	}
