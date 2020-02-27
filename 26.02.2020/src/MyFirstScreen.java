@@ -18,7 +18,7 @@ public class MyFirstScreen extends JFrame implements ActionListener {
 		
 		super(myTitle);
 		setSize(300,300);
-		setLayout(new BorderLayout());
+		//setLayout(new BorderLayout());
 		label1 = new JLabel("Java Screen building");
 		label2 = new JLabel("Top of screen");
 		button1= new JButton("Click Me");
