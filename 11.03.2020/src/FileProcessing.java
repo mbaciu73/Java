@@ -20,7 +20,7 @@ public class FileProcessing {
 		
 		String token = "";
 		try {
-			Scanner myScanner = new Scanner(f1);
+			myScanner         = new Scanner(f1);
 			token             = myScanner.next();
 		} 
 		catch (FileNotFoundException e) {
