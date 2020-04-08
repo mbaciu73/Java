@@ -1,10 +1,15 @@
 package com.Assignment;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
 
 public class StopWords {
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception{
+		
+		int i=0;
+		int j=0;
+		String[] newWords = null;
 		URL url = new URL("http://www.lextek.com/manuals/onix/stopwords1.html");
 		//Retrieving the contents of the specified page
 		Scanner website = new Scanner(url.openStream());
@@ -24,15 +29,21 @@ public class StopWords {
 	       
 		//System.out.println("Contents of the web page: "+result);
 		String words = (String) result.subSequence(946,3002);
-	        	
-		System.out.println(words);
 		
+		char[] alphabet = new char[26];
 		
-		
-		//splitting every word depending on what the letter begins with
-		String[] a =words.split("");
-		
-		System.out.println(a[4]);
+		   	
+		//System.out.println(words);
+			for(j=0;j<alphabet.length;j++) {
+				for(i=0;i<words.length();i++) {
+					if(words.charAt(i)==alphabet[j]) {
+						newWords = words.split(" ");
+					}
+				}
+			}
+			for(i=0;i<newWords.length;i++) {
+				System.out.println(newWords[i]);
+			}
 		
 		
 	}
