@@ -30,18 +30,18 @@ public class StopWords {
 		//System.out.println("Contents of the web page: "+result);
 		String words = (String) result.subSequence(946,3002);
 		
-		char[] alphabet = new char[26];
-		
+		char[] alphabet = new char[] {'a','b','c','d','e','f','g','h','i','j','k','l','m','m','o','p','q','r','s','t','u','v','w','x','y','z'};
 		   	
+		words = words.replace("", " ");
 		//System.out.println(words);
 			for(j=0;j<alphabet.length;j++) {
 				for(i=0;i<words.length();i++) {
 					if(words.charAt(i)==alphabet[j]) {
-						newWords = words.split(" ");
+						newWords=words.split("");
 					}
 				}
 			}
-			for(i=0;i<newWords.length;i++) {
+			for(i=0;i<newWords.length;i++){
 				System.out.println(newWords[i]);
 			}
 		
