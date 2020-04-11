@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class stopWords extends File{
 	
-	private File f1;
-	private File f2;
-	static int   i,j;
-	static String[]     newWords = null;
+	private File    f1;
+	private File    f2;
+	static int      i,j;
+	static String[] newWords = null;
 	public static void main(String[] args) throws Exception{
 		
 		URL url = new URL("http://www.lextek.com/manuals/onix/stopwords1.html");
@@ -30,23 +30,26 @@ public class stopWords extends File{
 	    
 		String words = (String) result.subSequence(946,3002);
 		
-		char[] alphabet = new char[] {'a','b','c','d','e','f','g','h','i','j','k','l','m','m','o','p','q','r','s','t','u','v','w','x','y','z'};
-		   	
+		//find the locations of the words where they begin
+		int[] startOfWord = new int[] {1,6,};
+		
+		//create a loop that creates the letter to go uppercase if it begins at the word
+		
+		//then split the string from the word are the words should be put into a string
+		
+		//look at main.java in lab7 if confused and use that code
 		
 		
-		for(i=0;i<alphabet.length;i++) {
-			for(j=0;j<words.length();j++) {
-					if(words.charAt(j)==alphabet[i]) {
-						newWords=words.split("");
-				}
-			}
-		}
-		for(i=0;i<newWords.length;i++){
+		//System.out.println(words);
+		//newWords = words;
+		
+		for(i=0;i<newWords.length;i++) {
 			System.out.println(newWords[i]);
 		}
+		for(i=0;i<newWords.length;i++) {
+			
+		}
 		
-		
-		//an idea on how to append a space between each word
 	}
 	
 	public stopWords(File f1, File f2) {
