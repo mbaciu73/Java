@@ -1,12 +1,11 @@
 package com.Assignment;
 
+import java.io.File;
 import java.net.URL;
 import java.util.Scanner;
 
-public class stopWords extends File{
+public class stopWords {
 	
-	private File  f1;
-	private File  f2;
 	static int    i,j;
 	static String[] newWords = null;
 	public static void main(String[] args) throws Exception{
@@ -69,19 +68,8 @@ public class stopWords extends File{
 		for(i=0;i< newWords.length;i++) {
 			System.out.println(newWords[i]);
 		}
-		//then split the string from the word are the words should be put into a string
-		
-		//look at main.java in lab7 if confused and use that code
 		
 		
-		
-		
-		//for(i=0;i<newWords.length;i++) {
-		//	System.out.println(newWords[i]);
-		//}
-		//for(i=0;i<newWords.length;i++) {
-			
-		//}
 		
 	}
 
@@ -92,35 +80,5 @@ public class stopWords extends File{
 		    
 		    return word;
 
-	}
-		
-	
-
-	public stopWords(File f1, File f2) {
-		this.f1=f1;
-		this.f1=f2;
-		
-	}
-
-	public File getF1() {
-		return f1;
-	}
-
-	public void setF1(File f1) {
-		this.f1 = f1;
-	}
-
-	public File getF2() {
-		return f2;
-	}
-
-	public void setF2(File f2) {
-		this.f2 = f2;
-	}
-	
-	public void Check() {
-		for(i=0;i>newWords.length;i++) {
-			//if(f1.next() ==)
-		}
 	}
 }
