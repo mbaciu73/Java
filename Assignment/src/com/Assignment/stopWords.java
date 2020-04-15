@@ -1,13 +1,12 @@
 package com.Assignment;
 
-import java.io.File;
 import java.net.URL;
 import java.util.Scanner;
 
 public class stopWords {
 	
 	static int    i,j;
-	static String[] newWords = null;
+	private static String[] newWords = null;
 	public static void main(String[] args) throws Exception{
 		
 		URL url = new URL("http://www.lextek.com/manuals/onix/stopwords1.html");
@@ -58,6 +57,9 @@ public class stopWords {
 	    		if(i==startOfWord2[j]) {
 	    			words[i] = UpperCase(words[i]);
 	    		}
+	    		else {
+	    			continue;
+	    		}
 	    	}
 	    }
 		
@@ -65,15 +67,8 @@ public class stopWords {
 		
 		newWords = theWords.split("(?=[A-Z])");
 		
-		for(i=0;i< newWords.length;i++) {
-			System.out.println(newWords[i]);
-		}
-		
-		
 		
 	}
-
-	
 	public static char UpperCase(char letter) {
 
 		    char word = Character.toUpperCase(letter);
@@ -81,4 +76,8 @@ public class stopWords {
 		    return word;
 
 	}
+	public static String[] getNewWords() {
+		return newWords;
+	}
+
 }

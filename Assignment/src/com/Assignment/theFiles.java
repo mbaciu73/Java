@@ -40,29 +40,34 @@ public class theFiles {
 	}
 	
 	String readFile1() {
-		String token1;
-		try {
-			s1 = new Scanner(f1);
-			token1 = s1.next();
-			
-		} catch (FileNotFoundException e) {
-			
-			e.printStackTrace();
-			token1=null;
+		String token1=null;
+		while(s1.hasNext()) {
+			try {
+					s1 = new Scanner(f1);
+					token1 = s1.next();
+					
+			} catch (FileNotFoundException e) {
+				
+				e.printStackTrace();
+				break;
+			}
 		}
 		return token1;
+		
 	}
 	String readFile2() {
-		String token2;
-		try {
-			s2 = new Scanner(f2);
-			token2 = s2.next();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			token2=null;
+		String token2=null;
+		while(s2.hasNext()) {
+			try {
+				s2 = new Scanner(f2);
+				token2 = s2.next();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				break;
+			}
 		}
-		return token2;
+			return token2;
 	}
 	
 	void close() {
