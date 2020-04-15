@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class stopWords extends File{
 	
-	private File    f1;
-	private File    f2;
-	static int      i,j;
+	private File  f1;
+	private File  f2;
+	static int    i,j;
 	static String[] newWords = null;
 	public static void main(String[] args) throws Exception{
 		
