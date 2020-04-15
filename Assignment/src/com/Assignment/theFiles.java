@@ -7,8 +7,8 @@ public class theFiles {
 	private String title2;
 	File f1,f2;
 	Scanner s1,s2;
-	
-	
+	static String token1,token2;
+
 	public theFiles(String title1,String title2) {
 		this.title1=title1;
 		this.title2=title2;
@@ -40,7 +40,7 @@ public class theFiles {
 	}
 	
 	String readFile1() {
-		String token1=null;
+		token1=null;
 		while(s1.hasNext()) {
 			try {
 					s1 = new Scanner(f1);
@@ -56,7 +56,7 @@ public class theFiles {
 		
 	}
 	String readFile2() {
-		String token2=null;
+		token2=null;
 		while(s2.hasNext()) {
 			try {
 				s2 = new Scanner(f2);
@@ -70,6 +70,25 @@ public class theFiles {
 			return token2;
 	}
 	
+	public static String getToken1() {
+		return token1;
+	}
+
+
+	public static void setToken1(String token1) {
+		theFiles.token1 = token1;
+	}
+
+
+	public static String getToken2() {
+		return token2;
+	}
+
+
+	public static void setToken2(String token2) {
+		theFiles.token2 = token2;
+	}
+
 	void close() {
 		s1.close();
 		s2.close();
