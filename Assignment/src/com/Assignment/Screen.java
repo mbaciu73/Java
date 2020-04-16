@@ -3,10 +3,15 @@ import javax.swing.JFrame;
 import java.awt.BorderLayout;
 public class Screen extends JFrame{
 	
-	public Screen(String Title) {
-		super(Title);
+	static String title = null;
+	public static void main(String[] args) {
+		Screen main = new Screen("Topic Modeller");
+	}
+	
+	public Screen(String title) {
+		super(title);
 		
-		setSize(450,450);
+		setSize(750,750);
 		setLayout(new BorderLayout());
 		
 		setVisible(true);
