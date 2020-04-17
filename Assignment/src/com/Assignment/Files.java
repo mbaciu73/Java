@@ -39,11 +39,13 @@ public class Files {
 		f2 = new File(this.title2);
 	}
 	
-	void read() {
-		while(s1.hasNext() || s2.hasNext()) {
-			String File1 = s1.nextLine();
-			String File2 = s2.nextLine();
+	public static String read(Scanner file) {
+		String next = file.next();
+		
+		if(next!= null) {
+			return null;
 		}
+		return next;
 	}
 	void close() {
 		s1.close();
