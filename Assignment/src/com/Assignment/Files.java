@@ -7,7 +7,7 @@ public class Files {
 	File f1;
 	Scanner s1;
 	
-
+	
 	public Files(String title) {
 		this.title=title;
 	}
