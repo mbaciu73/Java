@@ -4,8 +4,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class Files {
 	private String title;
-	File f1;
-	Scanner s1;
+	File theFile;
+	Scanner theScanner;
 	
 	
 	public Files(String title) {
@@ -23,7 +23,12 @@ public class Files {
 	}
 	
 	void open() {
-		f1 = new File(this.title);
+		theFile = new File(this.title);
+		try {
+			theScanner = new Scanner(theFile);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public static String read(Scanner file) {
@@ -35,7 +40,7 @@ public class Files {
 		return next;
 	}
 	void close() {
-		s1.close();
+		theScanner.close();
 	}
 	
 	
