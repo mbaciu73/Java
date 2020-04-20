@@ -2,6 +2,8 @@ package com.Assignment;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 public class Files {
 	private String title;
 	File theFile;
@@ -24,11 +26,14 @@ public class Files {
 	
 	void open() {
 		theFile = new File(this.title);
+	}
+	boolean check() {
 		try {
 			theScanner = new Scanner(theFile);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			return false;
 		}
+		return true;
 	}
 	
 	public static String read(Scanner file) {
