@@ -32,3 +32,5 @@ displays the percentage of the like that they are similar and the number of word
 If I has more time, I would spend less time on stopWords as I spent most of my time working on the algorithm aspect rather than the executional aspect of the program
 I would give myself more time in features that I could add in order to make it more enticing and attractive. Also find other ways to display the GUI without using borderlayout()
 all the time. What I did learn was that time is money and that if you do a program a day before or today, it can really affect the finished product.
+
+!!The Bin folder contains the classes while the src contains the source codes!!
